@@ -1,0 +1,22 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+  guardian:
+    build: .
+    env_file: .env
+    environment:
+      OLLAMA_URL: http://ollama:11434
+      DATABASE_PATH: /data/pr_guardian.db
+    volumes:
+      - guardian_data:/data
+    ports:
+      - "8000:8000"
+    depends_on:
+      - ollama
+volumes:
+  ollama_data:
+  guardian_data:
