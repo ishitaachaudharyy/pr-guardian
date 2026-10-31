@@ -1,4 +1,4 @@
-# PR Guardian
+# PR Guardian !
 
 A local-first, open-source GitHub pull request reviewer powered by an open-weight model through Ollama. It combines three role-based AI reviews (bug, security, and quality/tests), stores review history in SQLite, and can publish a summary comment on a PR.
 
