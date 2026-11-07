@@ -112,4 +112,4 @@ pytest -q
 
 ## License
 
-MIT. Add a `LICENSE` file with the standard MIT text before publishing.
+MIT License.
